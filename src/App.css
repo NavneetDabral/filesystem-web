@@ -1,0 +1,145 @@
+/* * { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(146, 68, 146, 0.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+* * * * * * * { background-color: rgba(255,0,0,.2); }
+* * * * * * * * { background-color: rgba(0,255,0,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); }  */
+
+
+*{
+  margin:0px;
+  padding:0px;
+  font-size:16px;
+}
+
+.app-container{
+   display: flex;
+   flex-direction: row;
+   height:100vh;
+}
+
+.vertical-nav{
+  width:256px;
+  background-color:#F9FAFC;
+  padding:32px;
+  box-sizing: border-box;
+  font-weight:600;
+}
+
+.vertical-nav span{
+  color:#AFB2B6 ;
+  display: inline-block;
+  font-size:12px;
+  margin-bottom:10px;
+}
+
+.content{
+  
+  display: flex;
+  flex-direction: row;
+
+}
+
+.content > div{
+margin:10px 60px;
+}
+
+ul{
+  list-style:none;
+}
+
+li{
+  margin:0px 0px;
+  padding:10px;
+  cursor:pointer;
+  color:#2F363F;
+  
+}
+
+.drop-down-nav ul{
+  max-height:0px;
+  opacity:0;
+  z-index:-2;
+  position:relative;
+  transition:max-height 1s, opacity 2s;
+  
+}
+
+.drop-down-nav ul li{
+  opacity:0;
+  transition:all 1s;
+  transform:translateY(-120px);
+  border-left:solid 1px #EEEFF1;
+}
+
+#show-li{
+  opacity:1;
+  transform:translateY(0px);
+}
+
+
+#show{
+  display:block;
+  max-height:130px;
+  opacity:1;
+  z-index:10;
+}
+
+
+.file{
+  background-image: url('./assets/noun_File_1884427.png');
+  background-position:center;
+  background-size:contain;
+  background-repeat:no-repeat;
+  width:51px;
+  height:72px;
+  line-height:95px;
+  color:#ffffff;
+  box-sizing: border-box;
+  font-size:14px;
+  cursor: pointer;
+  margin-bottom:5px;
+}
+
+.folder{
+  background-image: url('./assets/Shape.png');
+  background-position:left;
+  background-size:contain;
+  background-repeat:no-repeat;
+  width:67px;
+  height:55px;
+  box-sizing: border-box;
+  font-size:14px;
+  margin-bottom:5px;
+  
+}
+
+.file-container{
+  text-align: center;
+  height:113px;
+  width:90px;
+  padding:15px;
+  box-sizing: border-box;
+  color:#535B62;
+  cursor: pointer;
+
+}
+.folder-container{
+  text-align: center;
+  height:113px;
+  width:96px;
+  padding:15px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color:#535B62;
+  transition: all 0.5s;
+  cursor: pointer;
+
+}
+
+.folder-container:hover{
+  background-color: #E6F5FF ;
+}
